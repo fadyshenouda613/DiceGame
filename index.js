@@ -1,19 +1,15 @@
-function left_img() {
+
     let randomNumber1 = Math.floor(Math.random() * 6 + 1);
     document.querySelector(".img1").src="images/dice"+randomNumber1+".png";
-    return randomNumber1
-}
-function right_img(){
+
+
     let randomNumber2 = Math.floor(Math.random() * 6 + 1);
     document.querySelector(".img2").src="images/dice" + randomNumber2 + ".png";
-    return randomNumber2
-}
-left_img()
-right_img()
-if (left_img() > right_img()){
+
+if (randomNumber1 > randomNumber2){
     document.querySelector("h1").innerText="🚩 Player 1 wins!";
 }
-else if (right_img() < left_img()){
+else if (randomNumber2 > randomNumber1){
     document.querySelector("h1").innerText="Player 2 wins! 🚩";
 }
 else{
